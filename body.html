@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Marvel universe</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <nav class="nav_bar">
+                <ul class="menu_list" id="menu_list">
+                  <li><a href="#peliculas"> Peliculas</a></li> 
+                  <li><a href="#personajes"> Personajes</a></li> 
+                  <li><a href="#escenas"> Escenas</a></li> 
+                  <li><a href="#musica">Musica</a></li> 
+                  <li><a href="#contacto">Contacto</a></li> 
+                </ul>
+                <span class="btn_menu">
+                  <i class="fa fa-bars"></i>
+                </span>
+            </nav>
+            
+        </header>
+        <main class="contenido">
+            <div id="imagen">
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/r6t0czGbuGI"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h1 class="titulo">Todo sobre el universo marvel</h1>
+              <h2 class="titulo">Top 3 Peliculas Favoritas</h2>
+              <div id="peliculas" class="contenedor-peliculas">
+                <div class="card">
+                    <img src="./pictures/end-game.jpg" alt="">
+                    <h4>End Game</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit autem non culpa debitis, incidunt eaque placeat ipsa atque. Consequuntur atque perspiciatis ullam culpa voluptate? Fugiat atque numquam rem debitis dicta?</p>
+                    <a href="#">Leer mas</a>
+                </div>
+                <div class="card">
+                    <img src="./pictures/iron-man.jpg" alt="">
+                    <h4>Iron man</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit autem non culpa debitis, incidunt eaque placeat ipsa atque. Consequuntur atque perspiciatis ullam culpa voluptate? Fugiat atque numquam rem debitis dicta?</p>
+                    <a href="#">Leer mas</a>
+                </div>
+                <div class="card">
+                    <img src="./pictures/guardianes de la galaxia.jpg" alt="">
+                    <h4>Guardianes de la galaxia</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit autem non culpa debitis, incidunt eaque placeat ipsa atque. Consequuntur atque perspiciatis ullam culpa voluptate? Fugiat atque numquam rem debitis dicta?</p>
+                    <a href="#">Leer mas</a>
+                </div>
+              </div>
+               
+              <h2 class="titulo"> Top 3 Personajes favoritos</h2>
+              <div id="personajes" class="contenedor-personajes">
+                <div class="card">
+                    <img src="./pictures/spiderman.jpg" alt="">
+                    <h4>Spider Man</h4>
+                </div>
+                <div class="card">
+                    <img src="./pictures/thor.jpg" alt="">
+                    <h4>Thor</h4>
+                </div>
+                <div class="card">
+                    <img src="./pictures/iron-man-personaje.jpg" alt="">
+                    <h4>Iron Man</h4>
+                </div>
+              </div>
+              <h2 class="titulo">Escenas favoritas</h2>
+              <div id="escenas" class="contenedor-escenas">
+                <iframe width="860" height="615" src="https://www.youtube.com/embed/9LTUODaPAMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h2 class="titulo">Musica favorita</h2>
+              <div id="musica" class="contenedor-musica">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5pOp62IUR81?utm_source=generator&theme=0" width="860" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </div>
+
+              <div class="contenedor-contacto">
+                <div id="contacto" class="contacto">
+                  <h3>Dejanos tu comentario</h3>
+                  <form action="">
+                    <input type="text" required placeholder="Nombre">
+                    <input type="email" required placeholder="Email">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Deja tu comentario"></textarea>
+                    <button>Enviar</button>
+                  </form>
+                </div>
+              </div>
+        </main>
+        <footer class="footer">
+            <h3>Siguenos en nuestras redes:</h3>
+                <a target="_blank" href="https://www.facebook.com/Marvel"><i class="fab fa-2x  fa-facebook"></i></a>
+                  <a target="_blank" href="https://www.instagram.com/marvel/"><i class="fab fa-2x  fa-instagram"></i></a>
+                  <a target="_blank" href="https://twitter.com/marvel"><i class="fab fa-2x  fa-twitter"></i></a>   
+                  <a target="_blank" href="https://www.youtube.com/user/MARVEL"><i class="fab fa-2x  fa-youtube"></i></a>
+                  <h4>&copy; 2022 Martin Imbastari.</h4>
+        </footer>
+    </div>
+    <script>
+      addEventListener('DOMContentLoaded', () => {
+        const btn_menu = document.querySelector('.btn_menu')
+        if (btn_menu) {
+          btn_menu.addEventListener('click', () => {
+            const menu_list = document.querySelector('.menu_list')
+            menu_list.classList.toggle('show') 
+          })
+        }
+      })
+    </script>
+</body>
+</html>
