@@ -9,12 +9,12 @@ body {
     font-family: sans-serif;
 }
 
+header {
+    width: 100%;
+}
+
 .contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
     display: grid;
-    justify-content: center;
     grid-gap: 20px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -22,76 +22,49 @@ body {
 
 
 /*-------NAVBAR---------------------------*/
-
-
-
-.nav_bar {
-    width: 100vw;
-    height: 65px;
-    margin: auto;
+.menu ul {
     background-color: #e9183b;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgb(92, 92, 92);
-    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
-}
-
-
-.menu_list {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 0px;
     list-style: none;
 }
 
-.menu_list li {
+.menu ul li a:hover {
+    background: #d11534;
     border-radius: 3px;
-    margin:  0 5px;
 }
 
-.menu_list li a {
-    display: block;
-    font-size: 18px;
-    margin: 10px;
-    padding: 7px 13px;
+.menu a {
     color: white;
+    font-weight: 400;
+    display: block;
     text-decoration: none;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
-.menu_list li:hover{
-    background-color: #d31635;
-    transition: .4s;
-}
-
-.btn_menu {
-    margin-right: 30px;
-    font-size: 25px;
-    color: #fff;
-    cursor: pointer;
+[aria-controls="menu-list"] {
     display: none;
 }
 
-ul.show {
-    top: 65px;
-}
-
-/*-----Cards peliculas--------------------------------*/
-
- h1 {
-    background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% );
-    color: rgb(230, 228, 228);
-    text-transform: uppercase;
+.titulo-h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px #000000;
 }
 
 .titulo {
     text-align: center;
     font-size: 40px;
     font-weight: 100;
-    margin: 50px 0 20px 0;
+    margin: auto;
     text-shadow: 2px 2px #000000;
-
 }
 
 .contenedor-peliculas {
@@ -308,13 +281,13 @@ a, i, h4 {
     .contenedor-peliculas,
     .contenedor-personajes {
         display: grid;
-        grid-template-columns: 300px, 3fr;
+        grid-template-columns: 300px, 2fr;
         justify-content: center;
         align-items: center;
     }
 
     .card {
-        width: 500px;
+        width: 300px;
     }
 
     .card img {
@@ -339,50 +312,57 @@ a, i, h4 {
     }
 }
 
-@media (max-width: 858px) {
-    .nav_bar {
-        height: 65px;
+@media (max-width: 768px) {
+    .menu {
+        order: -1;
+        perspective: 800px;
     }
 
-    .btn_menu {
-        display: inline-flex;
+    .menu button {
+        background-color: #e9183b;
+        color: white;
+    }
+    [aria-controls="menu-list"] {
+        display: block;
+        margin-bottom: 10px;
     }
 
-    .menu_list {
-        position: fixed;
-        width: 100vw;
-        height: calc(100% - 65px);
-        background: #414141;
-        top: -100vh;
-        text-align: center;
-        transition: all .4s;
-        flex-direction: column;
-    }
-    .menu_list li {
-        margin: 30px 0 0 0 ;
-        line-height: 30px;
-    }
-    .menu_list li:hover {
-        background: none;
+    .menu ul {
+        max-height: 0px;
+        overflow: hidden;
+        transform: rotateX(90deg);
+        transition: all 0.5s;
     }
 
-    .menu_list li a {
-        font-size: 20px;
-        color: #fff;
-        font-weight: bold;
+    [aria-expanded="true"] ~ ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotateX(0);
     }
-    .menu_list li a:hover {
-        color: #e9183b;
-    }
-    
-}
 
-@media screen and (max-width: 858px) and (orientation: landscape) {
-    .menu_list li {
-        margin: 5px 0 0 0;
+    [aria-expanded="false"] .close {
+        display: none;
     }
-    .menu_list {
-        overflow: scroll;
-        height: calc(100% - 65px);
+
+    [aria-expanded="true"] .close {
+        display: inline-block;
     }
+
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+
+    .imagen {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .video {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: 500px;
+    }
+
 }
