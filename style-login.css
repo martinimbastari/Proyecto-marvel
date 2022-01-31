@@ -85,3 +85,10 @@ body {
   .options:hover {
     color: #fff;
   }
+
+  @media screen and (max-width:768px) {
+    .login-box {
+      height: 100vh;
+      width: 100%;
+    }
+  }
