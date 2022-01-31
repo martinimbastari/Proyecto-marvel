@@ -74,6 +74,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-bottom: rgb(235, 52, 32) solid 1px;
 }
 
 .card {
@@ -131,6 +132,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-bottom: rgb(235, 52, 32) solid 1px;
 }
 
     .contenedor-personajes .card {
@@ -163,6 +165,7 @@ header {
     margin: auto;
     display: flex;
     justify-content: center;
+    
 }
 
 /*---------Musica favorita---------------------------*/
