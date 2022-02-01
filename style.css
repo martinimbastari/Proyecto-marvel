@@ -240,6 +240,7 @@ textarea:hover {
 
 /*-------FOOTER------------------------------*/
 .footer {
+    margin: auto;
     width: 100vw;
     color: white;
     text-align: center;
